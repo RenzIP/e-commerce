@@ -30,10 +30,7 @@
                 @auth
                     <div class="flex items-center space-x-4">
                         <a href="{{ route('dashboard') }}" class="text-sm text-gray-600 hover:text-gray-900">Dashboard</a>
-                        <form method="POST" action="{{ route('logout') }}">
-                            @csrf
-                            <button type="submit" class="text-sm text-gray-600 hover:text-gray-900">Log Out</button>
-                        </form>
+                        <button wire:click="logout" class="text-sm text-gray-600 hover:text-gray-900">Log Out</button>
                     </div>
                 @else
                     <div class="flex items-center space-x-3">

@@ -24,4 +24,10 @@ class Navbar extends Component
     {
         return view('livewire.navbar');
     }
+
+    public function logout(\App\Livewire\Actions\Logout $logout)
+    {
+        $logout();
+        $this->redirect('/', navigate: true);
+    }
 }
